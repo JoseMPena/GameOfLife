@@ -30,7 +30,7 @@ describe Cell do
     #
     context "a dead cell" do
       context "given 3 neigbours" do
-        pending "turns to live" do
+        it "turns to live" do
           cell = Cell.new(0, [1, 1, 1, 0, 0, 0, 0, 0])
 
           expect(cell.regenerate).to eql(1)

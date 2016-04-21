@@ -12,7 +12,7 @@ class Cell
   # 4. Any _dead_ cell with exactly 3 living neighbours becomes alive (caused by reproduction)
   def regenerate
     # your implementation code here
-    @state = 0 if @neighbours.reduce(:+) == 0
+    @state = (@neighbours.reduce(:+) < 2) ? 0 : 1
     @state
   end
 
