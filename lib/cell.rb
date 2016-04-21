@@ -13,7 +13,6 @@ class Cell
   def regenerate
     # your implementation code here
     @state = (@neighbours.reduce(:+) < 2) ? 0 : 1
-    @state
   end
 
   def count_neighbours
